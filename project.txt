@@ -1,0 +1,24 @@
+### About this Project
+This project is an app for a hair salon specializing in braids. It will
+be developed in React using TypeScript and other tools.
+
+Among its main features are:
+- A login page for users and admin/employees of the salon.
+- A register page for new users.
+- A catalogue of different braids for the user to choose from, each one
+will be displayed in a card with a picture, name, price and duration, as
+well as a button to select the braid and start an appointment
+- An appointment page where the user can schedule an appointment with one
+selected braid as well as a day and hour. The user can then pay to reserve
+that time for their appointment.
+- A calendar to display available days and time for appointments.
+- In the main page there will be a short feed of the salon's Instagram
+profile's latest posts, with likes and comments count
+- The contacts of the salon, including their WhatsApp and Instagram
+- The location of the hair salon
+- Mobile responsive design
+ 
+Outside of the app itself, features we plan on including after the main
+app is done are:
+- Excel integration to build spreadsheets about monthly activity
+- Automatic WhatsApp chatbot to autoschedule appointments
