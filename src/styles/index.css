@@ -1,6 +1,29 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=DM+Serif+Display:ital@0;1&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+:root {
+  --primary-color: #25bd25;
+  --primary-color-dark: #088008;
+  --secondary-color: #ffd900;
+  --secondary-color-dark: rgb(218, 186, 0);
+  --background-color: #f0f0f0;
+  --text-color-dark: #333;
+  --text-color-light: #fff;
+  --font-sans-serif: 'Open Sans', sans-serif;
+  --font-serif: 'DM Serif Display', serif;
+  --font-mono: 'Ancizar Serif', monospace;
+  --border-radius: 4px;
+  --transition: all 0.3s ease;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-sm: 14px;
+  --font-size-xs: 12px;
+}
+
+*, *::before, *::after {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-sans-serif);
 }

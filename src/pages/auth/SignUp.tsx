@@ -5,14 +5,15 @@ import Button from "../../components/commons/Button/Button";
 import Input from "../../components/commons/Input/Input";
 import Label from "../../components/commons/Label/Label";
 
-interface LoginProps {}
+interface SignUpProps {}
 
-const Login: React.FC<LoginProps> = (props) => {
-  // Add state of hooks here if needed
+const SignUp: React.FC<SignUpProps> = (props) => {
   const [name, setName] = useState("");
   const [nameError, setNameError] = useState("");
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [confirmPasswordError, setConfirmPasswordError] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,13 +31,19 @@ const Login: React.FC<LoginProps> = (props) => {
     } else {
       setPasswordError("");
     }
+    if (password != confirmPassword) {
+      setConfirmPasswordError("A senha não confere.");
+      valid = false;
+    } else {
+      setConfirmPasswordError("");
+    }
     if (!valid) return;
   };
 
   return (
     <div className="login-container">
       <div className="login-content">
-        <h1 className="login-title">Login</h1>
+        <h1 className="login-title">Cadastro</h1>
         <form className="login-form" onSubmit={handleSubmit}>
           <Label value="Nome" htmlFor="name" />
           <Input
@@ -56,16 +63,25 @@ const Login: React.FC<LoginProps> = (props) => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <div className="error">{passwordError}</div>
+          <Label value="Confirmar Senha" htmlFor="confirm-password" />
+          <Input
+            type="password"
+            placeholder="Confirme a sua senha"
+            value={confirmPassword}
+            id="confirm-password"
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+          <div className="error">{confirmPasswordError}</div>
           <Button className="green" type="submit" onClick={() => {}}>
-            Entrar
+            Cadastrar
           </Button>
         </form>
         <p className="register">
-          Não possui conta? <Link to="/cadastro">Cadastre-se!</Link>
+          Já conta? <Link to="/login">Entrar!</Link>
         </p>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default SignUp;

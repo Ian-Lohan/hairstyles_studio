@@ -1,22 +1,33 @@
-.button {
+button {
   padding: 10px 20px;
-  color: white;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  box-shadow: var(--box-shadow);
 }
 
-.button:hover {
-  background-color: #0056b3;
+.green {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
 }
 
-.button:active {
-  background-color: #004085;
+.green:hover, .green:active {
+  background-color: var(--primary-color-dark);
 }
 
-.button:disabled {
+.gold {
+  background-color: var(--secondary-color);
+  color: var(--text-color-dark);
+}
+
+.gold:hover, .gold:active {
+  background-color: var(--secondary-color-dark);
+}
+
+button:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
 }
