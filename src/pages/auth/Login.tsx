@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Form, Link } from "react-router-dom";
-import "../../styles/Login.css"; // Import the CSS file for styling
+import { Link } from "react-router-dom";
+import "../../styles/Auth.css";
 import Button from "../../components/commons/Button/Button";
 import Input from "../../components/commons/Input/Input";
 import Label from "../../components/commons/Label/Label";
@@ -8,7 +8,6 @@ import Label from "../../components/commons/Label/Label";
 interface LoginProps {}
 
 const Login: React.FC<LoginProps> = (props) => {
-  // Add state of hooks here if needed
   const [name, setName] = useState("");
   const [nameError, setNameError] = useState("");
   const [password, setPassword] = useState("");

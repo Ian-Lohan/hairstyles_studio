@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Form, Link } from "react-router-dom";
-import "../../styles/Login.css"; // Import the CSS file for styling
+import { Link } from "react-router-dom";
+import "../../styles/Auth.css";
 import Button from "../../components/commons/Button/Button";
 import Input from "../../components/commons/Input/Input";
 import Label from "../../components/commons/Label/Label";
@@ -31,7 +31,7 @@ const SignUp: React.FC<SignUpProps> = (props) => {
     } else {
       setPasswordError("");
     }
-    if (password != confirmPassword) {
+    if (password !== confirmPassword) {
       setConfirmPasswordError("A senha não confere.");
       valid = false;
     } else {
