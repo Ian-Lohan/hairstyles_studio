@@ -1,0 +1,22 @@
+.section {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-title {
+  letter-spacing: 1px;
+  font-size: var(--font-size-section-title);
+  font-family: var(--font-serif);
+}
+
+.catalogue-see-more {
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+}
+
+.catalogue-see-more:hover {
+  background-color: var(--secondary-color-dark);
+}

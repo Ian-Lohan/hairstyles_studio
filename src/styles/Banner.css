@@ -1,0 +1,27 @@
+.banner {
+  height: 400px;
+  width: 100%;
+  background-size: cover;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-slogan {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-section-title);
+  color: var(--text-color-light);
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.banner-button {
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+}
+
+.banner-button:hover {
+  background-color: var(--secondary-color-dark);
+}
