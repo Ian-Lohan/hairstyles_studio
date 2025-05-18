@@ -21,3 +21,12 @@
 .catalogue-see-more:hover {
   background-color: var(--secondary-color-dark);
 }
+
+.schedule-form {
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  width: 500px;
+  margin: 20px;
+  padding: 10px;
+}

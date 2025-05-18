@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/Auth.css";
+import Form from "../../components/layout/Form";
 import Button from "../../components/commons/Button/Button";
 import Input from "../../components/commons/Input/Input";
 import Label from "../../components/commons/Label/Label";
@@ -36,7 +37,7 @@ const Login: React.FC<LoginProps> = (props) => {
     <div className="login-container">
       <div className="login-content">
         <h1 className="login-title">Login</h1>
-        <form className="login-form" onSubmit={handleSubmit}>
+        <Form className="login-form" onSubmit={handleSubmit}>
           <Label value="Nome" htmlFor="name" />
           <Input
             type="text"
@@ -58,7 +59,7 @@ const Login: React.FC<LoginProps> = (props) => {
           <Button className="green" type="submit" onClick={() => {}}>
             Entrar
           </Button>
-        </form>
+        </Form>
         <p className="register">
           Não possui conta? <Link to="/cadastro">Cadastre-se!</Link>
         </p>

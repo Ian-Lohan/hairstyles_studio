@@ -6,6 +6,9 @@ import Header from "../../components/layout/Header";
 import Banner from "../../components/layout/Banner";
 import Catalogue from "../../components/layout/Catalogue";
 import Button from "../../components/commons/Button/Button";
+import Form from "../../components/layout/Form";
+import Label from "../../components/commons/Label/Label";
+import Input from "../../components/commons/Input/Input";
 import Footer from "../../components/layout/Footer";
 
 interface HomeProps {}
@@ -33,6 +36,35 @@ const Home: React.FC<HomeProps> = (props) => {
         >
           Veja Mais
         </Button>
+      </div>
+      <div className="section">
+        <h2 className="section-title">Agendamento</h2>
+        <p className="section-description">Realize agora o seu agendamento!</p>
+        <Form className="schedule-form" onSubmit={() => {}}>
+          <div className="form-field">
+            <Label value="Nome" htmlFor="nome" />
+            <Input type="text" placeholder="Insira seu nome" id="nome" />
+          </div>
+          <div className="form-field">
+            <Label value="Número" htmlFor="numero" />
+            <Input type="text" placeholder="Insira seu número" id="numero" />
+          </div>
+          <div className="form-field">
+            <Label value="Cabelo" htmlFor="cabelo" />
+            <Input type="dropdown" placeholder="Escolha um item" id="cabelo" />
+          </div>
+          <div className="form-field">
+            <Label value="Horário" htmlFor="horario" />
+            <Input
+              type="datetime-local"
+              placeholder="Escolha um horário disponível"
+              id="horario"
+            />
+          </div>
+          <Button className="form-button" type="submit" onClick={() => {}}>
+            Agendar
+          </Button>
+        </Form>
       </div>
       <Footer />
     </div>
