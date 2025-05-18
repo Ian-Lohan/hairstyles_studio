@@ -15,6 +15,7 @@
 .catalogue-see-more {
   background-color: var(--secondary-color);
   color: var(--text-color-light);
+  margin-bottom: 20px;
 }
 
 .catalogue-see-more:hover {
